@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <title>簡單一頁式商店</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 600px; margin: 20px auto; }
+    h1 { text-align: center; }
+    .product { border: 1px solid #ccc; padding: 10px; margin: 10px 0; }
+    .product button { margin-top: 10px; }
+    #cart { border-top: 2px solid #333; margin-top: 20px; padding-top: 10px; }
+    #cart ul { list-style: none; padding: 0; }
+    #cart li { margin-bottom: 5px; }
+    #total { font-weight: bold; margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <h1>簡單一頁式商店</h1>
+
+  <div id="products"></div>
+
+  <div id="cart">
+    <h2>購物車</h2>
+    <ul id="cart-items"></ul>
+    <div id="total">總價：0 元</div>
+  </div>
+
+  <script>
+    // 商品資料
+    const products = [
+      { id: 1, name: "蘋果", price: 30 },
+      { id: 2, name: "香蕉", price: 20 },
+      { id: 3, name: "橘子", price: 25 }
+    ];
+
+    // 購物車（物件，key: 商品id, value: 數量）
+    const cart = {};
+
+    // 顯示商品列表
+    function showProducts() {
+      const container = document.getElementById("products");
+      container.innerHTML = "";
+      products.forEach(p => {
+        const div = document.createElement("div");
+        div.className = "product";
+        div.innerHTML = `
+          <h3>${p.name}</h3>
+          <p>價格：${p.price} 元</p>
+          <button onclick="addToCart(${p.id})">加入購物車</button>
+        `;
+        container.appendChild(div);
+      });
+    }
+
+    // 加入購物車
+    function addToCart(id) {
+      if(cart[id]) {
+        cart[id]++;
+      } else {
+        cart[id] = 1;
+      }
+      showCart();
+    }
+
+    // 顯示購物車內容
+    function showCart() {
+      const list = document.getElementById("cart-items");
+      list.innerHTML = "";
+      let total = 0;
+      for (const id in cart) {
+        const product = products.find(p => p.id == id);
+        const qty = cart[id];
+        const subtotal = product.price * qty;
+        total += subtotal;
+        const li = document.createElement("li");
+        li.textContent = `${product.name} x ${qty} = ${subtotal} 元`;
+        list.appendChild(li);
+      }
+      document.getElementById("total").textContent = `總價：${total} 元`;
+    }
+
+    // 頁面載入後初始化
+    showProducts();
+  </script>
+</body>
+</html>
