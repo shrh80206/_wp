@@ -1,0 +1,56 @@
+//1. 變數與型態轉換（num 保留）
+let num = "42";
+let A = parseInt(num) + 8;
+console.log(A); 
+//2. 運算與條件判斷（a、b 保留）
+let a = 10;
+let b = 20;
+if (a > b) {
+    console.log("a 大於 b");
+} else {
+    console.log("a 小於等於 b");
+}
+//3. 陣列排序（numbers 保留）
+let numbers = [3, 7, 1, 9, 4];
+numbers.sort((A, B) => A - B);
+console.log(numbers); 
+//4. 陣列過濾（nums 保留）
+let nums = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+let A = nums.filter(B => B % 2 === 0);
+console.log(A); 
+//5. 基本函數（add 保留）
+function add(A, B) {
+    return A + B;
+}
+console.log(add(5, 7)); 
+//6. 遞迴階乘（factorial 保留）
+function factorial(A) {
+    if (A === 0 || A === 1) return 1;
+    return A * factorial(A - 1);
+}
+console.log(factorial(5)); 
+7. for 迴圈總和（arr 保留）
+let arr = [2, 4, 6, 8, 10];
+let A = 0;
+for (let B = 0; B < arr.length; B++) {
+    A += arr[B];
+}
+console.log(A); 
+//8. while 倒數（count 保留）
+let count = 5;
+while (count >= 0) {
+    console.log(count);
+    count--;
+}
+//9. 物件操作（person 保留）
+let person = { name: "Alice", age: 25, city: "Taipei" };
+person.age += 1;
+console.log(person); // { name: 'Alice', age: 26, city: 'Taipei' }
+//10. 物件遍歷（scores 保留）
+let scores = { Alice: 85, Bob: 92, Charlie: 78 };
+for (let A in scores) {
+    console.log(`${A} 的分數是 ${scores[A]}`);
+}
+
+
+
