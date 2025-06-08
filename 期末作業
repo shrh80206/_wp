@@ -1,0 +1,38 @@
+期末作業
+習題 1 - 個人網頁
+內容：設計一個個人網站，自我介紹頁面
+要求：可有多頁面，展示個人資料、照片等
+https://github.com/shrh80206/_wp/blob/main/HW1
+習題 2 - 註冊表單
+內容：製作一個使用者註冊表單
+功能：輸入帳號、密碼、Email 等資料並驗證
+https://github.com/shrh80206/_wp/blob/main/WH2
+習題 3 - JavaScript 練習
+內容：完成 10 題 JavaScript 基礎題目
+目的：熟悉 JS 基本語法與 DOM 操作
+https://github.com/shrh80206/_wp/blob/main/HW3
+習題 4 - JavaScript 進階
+內容：完成一組進階 JavaScript 題目
+要求：運用事件監聽、Ajax、物件導向等
+https://github.com/shrh80206/_wp/blob/main/HW4
+習題 5 - 個人網站路由設計
+內容：設計網站路由系統，根據路徑回應不同頁面
+功能：使用 Node.js 或其他後端框架實現
+https://github.com/shrh80206/_wp/blob/main/HW5
+習題 6 - 新增三筆貼文
+內容：完成可以新增 3 筆貼文的系統
+要求：連結資料庫保存貼文資訊
+https://github.com/shrh80206/_wp/blob/main/HW6
+習題 7 - sqlite blog 加上貼文時間
+內容：在原有部落格系統加入貼文時間紀錄與顯示
+功能：新增時間欄位，並在網頁顯示出來
+未做
+習題 8 - Python 基礎練習
+內容：完成一組 Python 基礎題目
+目的：熟悉 Python 語法及基礎運算
+https://github.com/shrh80206/_wp/tree/main/WH8
+習題 9 - blogSignup 加刪除貼文功能
+內容：為部落格系統新增刪除貼文功能
+要求：在已登入狀態下，使用者可刪除自己貼文
+https://github.com/shrh80206/html2server/tree/master/02-%E5%BE%8C%E7%AB%AFserver/py/fastapi/04-session/02-blogSignup
+均有AI輔助
