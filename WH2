@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <title>註冊表單</title>
+</head>
+<body>
+
+    <h2>註冊表單</h2>
+    <form action="#" method="post">
+        <label for="姓名">姓名：</label>
+        <input type="text" id="姓名" name="姓名" required>
+
+        <label for="電子郵件">電子郵件：</label>
+        <input type="email" id="電子郵件" name="電子郵件" required>
+
+        <label for="密碼">密碼：</label>
+        <input type="password" id="密碼" name="密碼" required>
+
+        <label for="性別">性別：</label>
+        <select id="性別" name="性別">
+            <option value="男">男</option>
+            <option value="女">女</option>
+            <option value="其他">其他</option>
+        </select>
+
+        <label for="生日">生日：</label>
+        <input type="date" id="生日" name="生日">
+
+        <label>
+            <input type="checkbox" name="同意條款" required>
+            我已閱讀並同意使用條款
+        </label>
+
+        <button type="submit">註冊</button>
+    </form>
+
+</body>
+</html>
