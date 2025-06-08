@@ -1,0 +1,29 @@
+import { Application, Router } from "https://deno.land/x/oak/mod.ts";
+const posts = [
+  { id: 1, title: "第一篇貼文", content: "這是第一篇的內容" },
+  { id: 2, title: "第二篇貼文", content: "這是第二篇的內容" },
+  { id: 3, title: "第三篇貼文", content: "這是第三篇的內容" },
+];
+const router = new Router();
+router.get("/", (ctx) => {
+  ctx.response.body = `
+    <html>
+      <head><title>貼文列表</title></head>
+      <body>
+        <h1>貼文列表</h1>
+        <ul>
+          ${posts.map(post => `<li><strong>${post.title}</strong>: ${post.content}</li>`).join("")}
+        </ul>
+        <a href="/posts">查看所有貼文</a>
+      </body>
+    </html>
+  `;
+});
+router.get("/posts", (ctx) => {
+  ctx.response.body = posts;
+});
+const app = new Application();
+app.use(router.routes());
+app.use(router.allowedMethods());
+console.log("伺服器啟動於 http://localhost:8000");
+await app.listen({ port: 8000 });
