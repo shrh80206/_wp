@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Self-Introduction</title>
+    <style>
+        body { margin: 20px 50px; }
+        span {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <span>111210516 陳昱瑄 2005/0206</span>
+    <h1>自我介紹</h1>
+    <h2>興趣</h2>
+    <ul>
+        <li>遊戲</li>
+        <!-- 閱讀輕小說 -->
+        <li>閱讀</li>
+    </ul>
+    <h2>就讀學校 </h2>
+    <p>我就讀於國立金門大學.</p>
+    <!-- 聯絡方式 -->
+    <h2>Contact information</h2>
+    <ul>
+        <li>Email: s111210516@student.nqu.edu.tw</li>
+    </ul>
+</body>
+</html>
